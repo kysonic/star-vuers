@@ -12,7 +12,7 @@ export default app
 const isProduction = process.env.NODE_ENV ==='production'
 
 /** Server Side Rendering **/
-const templatePath = path.resolve(__dirname,'../templates/index.template.html')
+const TEMPLATE_PATH = path.resolve(process.cwd(),'./templates/index.template.html')
 
 let renderer
 
@@ -22,7 +22,7 @@ let renderer
  * @private
  */
 function _createRenderer({template,bundle,manifest}={}){
-    const viewTemplate = template || fs.readFileSync(templatePath,'utf-8')
+    const viewTemplate = template || fs.readFileSync(TEMPLATE_PATH,'utf-8')
     const serverBundle = bundle || require('./../build/vue-ssr-server-bundle.json')
     const clientManifest = manifest || require('./../build/vue-ssr-client-manifest.json')
     return createBundleRenderer(serverBundle,{runInNewContext:false,template:viewTemplate,clientManifest})
@@ -31,11 +31,10 @@ function _createRenderer({template,bundle,manifest}={}){
 if(isProduction) {
     renderer = _createRenderer()
     // Serve static files [comment for nginx]
-    app.use(favicon(path.resolve(__dirname,'../favicon.ico')))
-    app.use(serve(path.resolve(__dirname,'./build'),{ maxage: 1000 * 60 * 15, gzip: true}))
+    app.use(favicon(path.resolve(process.cwd(),'./favicon.ico')))
+    app.use(serve(path.resolve(process.cwd(),'./build')))
 }else {
-    renderer = _createRenderer()
-    setupVueDevSsr(templatePath).on('update',(payload)=>renderer = _createRenderer(payload))
+    setupVueDevSsr(TEMPLATE_PATH).on('update',(payload)=>renderer = _createRenderer(payload))
 }
 
 /** Routing **/

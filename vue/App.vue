@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    import './stylesheets/styles.css'
     export default {
         name: "App",
         data () {
@@ -13,6 +14,11 @@
     }
 </script>
 
-<style scoped>
+<style>
 
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
 </style>

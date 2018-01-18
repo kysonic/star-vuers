@@ -1,9 +1,19 @@
 'use strict'
 
-require('babel-core/register')
+const isProduction = process.env.NODE_ENV==='production'
+
+
+
+let app
+if(isProduction){
+    app = require('../build/compiled.server.js').default
+}else {
+    require('babel-core/register')
+    app = require('../server').default
+}
+
 
 const http = require('http')
-const app = require('../server').default
 const port = process.env.PORT || 3000
 
 /**

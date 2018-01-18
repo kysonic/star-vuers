@@ -2,7 +2,11 @@
     <div id="content">
         <Person></Person>
         <router-link :to="{ path: '/xpath'}">XPath</router-link>
-        <a href="/xpath">XPATH5</a>
+        <a href="/xpath">XPATH2</a>
+        <h1>HEY</h1>
+        <div class="logo">
+            <img src="../assets/img/logo.png" alt="LOGO">
+        </div>
     </div>
 </template>
 
@@ -28,8 +32,8 @@
     }
 </script>
 
-<style scoped>
+<style>
     a {
-        color: black;
+        color: red;
     }
 </style>
