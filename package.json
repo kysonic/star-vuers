@@ -8,6 +8,7 @@
   "scripts": {
     "init": "yarn install",
     "dev": "yarn run build:dev && cross-env NODE_ENV=dev node ./bin/www",
+    "dev:cache": "yarn run build:dev && cross-env NODE_ENV=dev USE_CACHE=true node ./bin/www",
     "start": "cross-env NODE_ENV=production node ./bin/www",
     "build": "rm -rf ./build && yarn run build:client && yarn run build:server && yarn run build:app",
     "build:dev": "rm -rf ./build && yarn run build:client:dev && yarn run build:server:dev",
@@ -58,6 +59,7 @@
     "koa-favicon": "^2.0.0",
     "koa-router": "^7.3.0",
     "koa-static": "^4.0.2",
+    "lru-cache": "^4.1.1",
     "memory-fs": "^0.4.1"
   }
 }

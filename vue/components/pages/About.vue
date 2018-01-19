@@ -1,14 +1,16 @@
 <template>
-    <div id="content">XPATHHHH</div>
+   <div class="about-container">
+       ABOUT
+   </div>
 </template>
 
 <script>
-    import titleMixin from '../mixins/title-mixin'
+    import titleMixin from '../../mixins/title-mixin'
     export default {
-        name: "XPath",
+        name: "About",
         mixins: [titleMixin],
         title(){
-            return 'XPATH'
+            return 'About'
         },
         data () {
             return {}

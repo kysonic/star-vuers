@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '../components/Home.vue'
-import XPath from '../components/XPath.vue'
+import Home from '../components/pages/Home.vue'
+import About from '../components/pages/About.vue'
 
 Vue.use(VueRouter)
 
@@ -11,7 +11,7 @@ export function createRouter(){
         mode: 'history',
         routes: [
             {path: '/', component: Home},
-            {path: '/xpath', component: XPath},
+            {path: '/about', component: About}
         ]
     })
 }

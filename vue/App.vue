@@ -1,24 +1,27 @@
 <template>
     <div id="app">
-        <router-view></router-view>
+        <div class="container">
+            <Navbar></Navbar>
+            <div class="content">
+                <router-view></router-view>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-    import './stylesheets/styles.css'
+    import Navbar from './components/layout/Navbar.vue'
     export default {
         name: "App",
         data () {
             return {}
+        },
+        components: {
+            Navbar
         }
     }
 </script>
 
 <style>
-
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
+    @import './stylesheets/styles.css';
 </style>
