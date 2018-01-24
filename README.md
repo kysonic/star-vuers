@@ -1,4 +1,4 @@
-# Stat Vuers
+# Star Vuers
 
 ## Click-cluck 
 
