@@ -16,8 +16,8 @@ Vue2 + Koa2 projects. The main branch of the repo contains all required for basi
 
 ### Clone the repo: 
 
-    git clone https://github.com/kysonic/iso2vue2koa2.git
-    cd ./iso2vue2koa2
+    git clone https://github.com/kysonic/star-vuers.git
+    cd ./star-vuers
     yarn run init
     
 ### Development mode:
