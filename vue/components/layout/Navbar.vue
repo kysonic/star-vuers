@@ -1,7 +1,10 @@
 <template>
     <header>
         <div class="left">
-            <a class="item" href="https://github.com/vuejs/awesome-vue">Vue</a>
+            <a class="item vue-link" href="https://github.com/vuejs/awesome-vue">Vue</a>
+            <div class="logo">
+                <img src="../../assets/img/star-vuers-logo.svg" alt="Star Vuers Logo">
+            </div>
         </div>
         <div class="right">
             <ul class="list">
@@ -63,5 +66,27 @@
 
     .item:hover, li a:hover {
         text-decoration: underline;
+    }
+    .logo {
+        display: none;
+        width: 100%;
+        height: 100%;
+        max-width: 120px;
+        max-height: 55px;
+    }
+    .logo img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    @media (max-width: 1367px) {
+        .logo {
+            display: block;
+        }
+        .vue-link {
+            display: none;
+        }
+        .container header .left {
+            margin-left: 20px;
+        }
     }
 </style>

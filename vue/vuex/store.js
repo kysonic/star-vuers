@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import state from './defaultState'
 import * as actions from './actions'
+import * as getters from './getters'
 import mutations from './mutations'
 
 Vue.use(Vuex)
@@ -11,6 +12,7 @@ export function createStore(){
     return new Vuex.Store({
         state,
         actions,
-        mutations
+        mutations,
+        getters
     })
 }

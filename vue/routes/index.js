@@ -11,7 +11,8 @@ export function createRouter(){
         mode: 'history',
         routes: [
             {path: '/', component: Home},
-            {path: '/about', component: About}
+            {path: '/about', component: About},
+            {path: '/:id', component: Home},
         ]
     })
 }

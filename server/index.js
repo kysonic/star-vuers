@@ -43,10 +43,11 @@ function _createRenderer({template,bundle,manifest}={}){
     })
 }
 
+app.use(favicon(path.resolve(process.cwd(),'./favicon.ico')))
+
 if(isProduction) {
     renderer = _createRenderer()
     // Serve static files [comment for nginx]
-    app.use(favicon(path.resolve(process.cwd(),'./favicon.ico')))
     app.use(serve(path.resolve(process.cwd(),'./build')))
 }else {
     setupVueDevSsr(TEMPLATE_PATH).on('update',(payload)=>renderer = _createRenderer(payload))
