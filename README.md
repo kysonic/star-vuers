@@ -2,7 +2,7 @@
 
 ## Click-cluck 
 
-[Demo](https://kysonic.github.io/star-vuers/)
+[Demo (just for fun)](https://kysonic.github.io/star-vuers/)
 
 ## About
 
