@@ -50,7 +50,7 @@ Vue2 + Koa2 projects. The main branch of the repo contains all required for basi
 ## Contributing:
 
 - Fork the repo
-- Crate new branch called according your basic idea. For instance: 'mongodb-api-layer'
+- Crate new branch called according to your basic idea. For instance: 'mongodb-api-layer'
 - Write your code
 - Submit your pull request
 
